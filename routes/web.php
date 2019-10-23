@@ -1,5 +1,8 @@
 <?php
 
+use EndorphinStudio\Detector\Detector;
+
 Route::get('/', function () {
-    return view('welcome');
+    $detector = new Detector();
+    return view('welcome',['Detector' => $detector->analyze()]);
 });

@@ -1,0 +1,120 @@
+body
+{
+    font-family: "PT Sans", Roboto, OpenSans, Tahoma, Verdana;
+    background: #d0d0d0;
+    margin: 0;
+    padding: 0;
+}
+
+a,a:hover
+{
+    text-decoration: none;
+}
+
+section, footer
+{
+    width: 90%;
+    max-width: 500px;
+    margin: 3% auto;
+    background: #fff;
+    font-size: 20px;
+    padding: 0 10px 10px 10px;
+    border-radius: 7px;
+}
+
+section h3
+{
+    text-align: center;
+    padding-top: 7px;
+    color: #74b816;
+}
+
+section .data
+{
+    padding: 5px 5px;
+    display: flex;
+    justify-content: normal;
+}
+
+section .data .icon, section .data span, footer .services .icon
+{
+    line-height: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+section .data span
+{
+    margin: 0 10px;
+}
+
+section .data .icon, footer .services .icon
+{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    background: #74b816;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+section .data .icon.fa-firefox, section .data .icon.fa-ubuntu
+{
+    background: #F9690E;
+}
+
+section .data .icon.fa-edge
+{
+    background: #3498DB;
+}
+
+section .data .icon.fa-opera
+{
+    background: #D91E18;
+}
+
+footer {
+    background: transparent;
+    margin: 20px auto 5px;
+}
+
+footer h4
+{
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+footer .status
+{
+    margin: 10px auto 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .services
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .services a {
+    display: inline-block;
+}
+
+footer .services .fa-github
+{
+    background-color: #373737;
+}
+
+footer .services .fa-twitter
+{
+    background-color: rgba(29,161,242,1.00);
+}
+
+footer .services .fa-telegram
+{
+    background-color: #0088cc;
+}
