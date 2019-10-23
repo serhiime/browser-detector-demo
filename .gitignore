@@ -15,3 +15,6 @@ yarn-error.log
 /vendor
 composer.phar
 composer.lock
+
+# PHP Storm
+/.idea
