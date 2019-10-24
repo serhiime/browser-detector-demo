@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <title>Laravel</title>
+    <title>endorphin-studio/browser-detector Live demo </title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Open Sans|PT Sans" rel="stylesheet">
@@ -59,6 +59,19 @@
     </div>
 </section>
 
+@if(method_exists($Detector, 'getDetectorVersion'))
+    <section>
+        <h3>Library</h3>
+        <div class="data">
+            <span>Version: {{ $Detector->getDetectorVersion() }}</span>
+        </div>
+        <div class="data">
+            <span><a href="https://github.com/endorphin-studio/browser-detector" class=""> Github</a> </span>
+            <span><a href="https://packagist.org/packages/endorphin-studio/browser-detector"> Packagist</a> </span>
+        </div>
+    </section>
+@endif
+
 <section>
     <h3>User Agent String</h3>
     <div class="data">
@@ -75,8 +88,6 @@
         <a href="https://packagist.org/packages/endorphin-studio/browser-detector"><img src="https://poser.pugx.org/endorphin-studio/browser-detector/license" alt="License" /></a>
     </div>
     <div class="services">
-        <a href="https://github.com/endorphin-studio/browser-detector" class="icon fab fa-github"> </a>
-        <a href="https://packagist.org/packages/endorphin-studio/browser-detector" class="icon fas fa-database"> </a>
         <a href="https://twitter.com/serhii_me" class="icon fab fa-twitter"> </a>
         <a href="http://serhii.work" class="icon fas fa-globe"> </a>
         <a href="https://t.me/serhiime" class="icon fab fa-telegram"> </a>
