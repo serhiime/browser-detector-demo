@@ -67,7 +67,7 @@
                 <i class="icon fab fab-edge"></i>
             @elseif (in_array(mb_strtolower($Detector->getBrowser()->getName()), ['opera mini',  'opera mobile', 'opera']))
                 <i class="icon fab fab-opera"></i>
-            @elseif (in_array(mb_strtolower($Detector->getBrowser()->getName()), ['silk',  'playstation browser']))
+            @elseif (in_array(trim(mb_strtolower($Detector->getBrowser()->getName())), ['silk',  'playstation browser']))
                 <i class="icon fab fa-playstation"></i>
             @else
                 <i class="icon fab fa-{{ mb_strtolower($Detector->getBrowser()->getName()) }}"></i>
