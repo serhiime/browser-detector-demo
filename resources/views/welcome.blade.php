@@ -24,7 +24,7 @@
             <i class="icon fab fa-android"></i>
         @elseif ($Detector->getOS()->getName() === 'Ubuntu')
             <i class="icon fab fa-ubuntu"></i>
-        @elseif ($Detector->getOS()->getName() === 'Playstation Os')
+        @elseif (in_array(mb_strtolower($Detector->getOS()->getName()), ['playstation os'))
             <i class="icon fab fa-playstation"></i>
         @elseif ($Detector->getOS()->getFamily() === 'unix' )
             <i class="icon fab fa-linux"></i>
