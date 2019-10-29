@@ -24,6 +24,8 @@
             <i class="icon fab fa-android"></i>
         @elseif ($Detector->getOS()->getName() === 'Ubuntu')
             <i class="icon fab fa-ubuntu"></i>
+        @elseif ($Detector->getOS()->getName() === 'Playstation Os')
+            <i class="icon fab fab-playstation"></i>
         @elseif ($Detector->getOS()->getFamily() === 'unix' )
             <i class="icon fab fa-linux"></i>
         @else
@@ -36,7 +38,23 @@
 <section>
     <h3>Device</h3>
     <div class="data">
-        <i class="icon fa-@if($Detector->getDevice()->getName() === 'iPhone')apple fab @else{{ $Detector->getDevice()->getType() }} fa @endif"></i>
+        @if (in_array(mb_strtolower($Detector->getDevice()->getName()), ['iphone', 'ipad', 'ipod', 'apple tv']))
+            <i class="icon fab fa-apple"></i>
+        @elseif ($Detector->getDevice()->getName() === 'mac')
+            <i class="icon fab fa-apple"></i>
+        @elseif ($Detector->getDevice()->getName() === 'Android')
+            <i class="icon fab fa-android"></i>
+        @elseif (in_array(mb_strtolower($Detector->getDevice()->getName()), ['playstation 4', 'playstation vita']))
+            <i class="icon fab fa-playstation"></i>
+        @elseif (in_array(mb_strtolower($Detector->getDevice()->getName()), ['xbox']))
+            <i class="icon fab fab-xbox"></i>
+        @elseif ($Detector->getDevice()->getType() === 'console' )
+            <i class="icon fas fa-gamepad"></i>
+        @elseif ($Detector->getDevice()->getType() === 'tv' )
+            <i class="icon fas fa-tv"></i>
+        @else
+            <i class="icon fas fa-{{ $Detector->getDevice()->getType() }}"></i>
+        @endif
         <span>{{ $Detector->getDevice()->getName() }}</span>
     </div>
 </section>
@@ -49,6 +67,8 @@
                 <i class="icon fab fab-edge"></i>
             @elseif (in_array(mb_strtolower($Detector->getBrowser()->getName()), ['opera mini',  'opera mobile', 'opera']))
                 <i class="icon fab fab-opera"></i>
+            @elseif (in_array(mb_strtolower($Detector->getBrowser()->getName()), ['silk',  'playstation browser']))
+                <i class="icon fab fab-playstation"></i>
             @else
                 <i class="icon fab fa-{{ mb_strtolower($Detector->getBrowser()->getName()) }}"></i>
             @endif
@@ -59,11 +79,11 @@
     </div>
 </section>
 
-@if(method_exists($Detector, 'getDetectorVersion'))
+@if(method_exists($Detector, 'getCoreVersion'))
     <section>
         <h3>Library</h3>
         <div class="data">
-            <span>Version: {{ $Detector->getDetectorVersion() }}</span>
+            <span>Version: {{ $Detector->getCoreVersion() }}</span>
         </div>
         <div class="data">
             <span><a href="https://github.com/endorphin-studio/browser-detector" class=""> Github</a> </span>
