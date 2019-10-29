@@ -25,7 +25,7 @@
         @elseif ($Detector->getOS()->getName() === 'Ubuntu')
             <i class="icon fab fa-ubuntu"></i>
         @elseif ($Detector->getOS()->getName() === 'Playstation Os')
-            <i class="icon fab fab-playstation"></i>
+            <i class="icon fab fa-playstation"></i>
         @elseif ($Detector->getOS()->getFamily() === 'unix' )
             <i class="icon fab fa-linux"></i>
         @else
@@ -68,7 +68,7 @@
             @elseif (in_array(mb_strtolower($Detector->getBrowser()->getName()), ['opera mini',  'opera mobile', 'opera']))
                 <i class="icon fab fab-opera"></i>
             @elseif (in_array(mb_strtolower($Detector->getBrowser()->getName()), ['silk',  'playstation browser']))
-                <i class="icon fab fab-playstation"></i>
+                <i class="icon fab fa-playstation"></i>
             @else
                 <i class="icon fab fa-{{ mb_strtolower($Detector->getBrowser()->getName()) }}"></i>
             @endif
